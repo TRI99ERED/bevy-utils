@@ -1,0 +1,1 @@
+pub const DIAGONAL: f32 = 0.70710678118;
