@@ -2,12 +2,12 @@
 
 use bevy::{
     ecs::query::{QueryData, QueryFilter},
-    prelude::*,
+    prelude::*, state::state::FreelyMutableState,
 };
 
 pub fn switch_to_state<S>(state: &'static S) -> impl Fn(ResMut<NextState<S>>) + 'static
 where
-    S: States + Clone,
+    S: States + Clone + FreelyMutableState,
 {
     let f: _ = |mut next_state: ResMut<NextState<S>>| {
         next_state.set(state.clone());
