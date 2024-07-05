@@ -2,6 +2,7 @@ pub mod constants;
 pub mod geometry;
 pub mod input;
 pub mod system_builders;
+pub mod systems;
 
 pub mod prelude {
     pub use super::constants::DIAGONAL;
