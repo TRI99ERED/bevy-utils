@@ -16,7 +16,7 @@ where
     f
 }
 
-pub fn entity_exists_df<D, F>() -> impl Fn(Query<D, F>) -> bool
+pub fn entity_exists_filtered<D, F>() -> impl Fn(Query<D, F>) -> bool
 where
     D: QueryData,
     F: QueryFilter,
@@ -26,7 +26,7 @@ where
     f
 }
 
-pub fn entity_exists_d<D>() -> impl Fn(Query<D, ()>) -> bool
+pub fn entity_exists<D>() -> impl Fn(Query<D, ()>) -> bool
 where
     D: QueryData,
 {
